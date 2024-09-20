@@ -3,7 +3,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
 import CustomButton from "../components/CustomButton";
-import { Redirect, router } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import SvgImage from "react-native-svg";
 
 export default function App() {
@@ -57,6 +57,7 @@ export default function App() {
             containerStyles="w-full mt-8 py-3 rounded-lg bg-secondary"
             textStyle="text-white text-xl font-semibold"
           />
+          <Link href={'home'}><Text className='text-4xl'>Production</Text></Link>
         </View>
       </ScrollView>
       <StatusBar style="auto" />

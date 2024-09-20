@@ -3,11 +3,30 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 const TermsAndConditions = () => {
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.heading}>Terms and Conditions</Text>
-        <Text style={styles.date}>Last updated: [Insert Date]</Text>
+        <Text>
+          Last updated: 1{" "}
+          {months[new Date().getMonth()] + "  " + new Date().getFullYear()}
+        </Text>
 
         <Text style={styles.sectionHeading}>1. Definitions</Text>
         <Text style={styles.paragraph}>

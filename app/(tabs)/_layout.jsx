@@ -8,8 +8,14 @@ const TabsLayout = () => {
   return (
     <>
       <Tabs
+        style={{
+          height: 80, // Increase the height to your desired value
+        }}
         screenOptions={{
           tabBarShowLabel: false,
+          tabBarStyle: {
+            backgroundColor: "#e6f0ff", // Change this to your desired color
+          },
         }}
       >
         <Tabs.Screen
@@ -60,11 +66,11 @@ const TabsLayout = () => {
         <Tabs.Screen
           name="create"
           options={{
-            title: "Post",
+            title: "",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
               // Change the icon's name based on the focused state
-              const iconSize = focused ? 28 : 24; // Adjust this if you have different icons for focused state
+              const iconSize = focused ? 28 : 26; // Adjust this if you have different icons for focused state
               // Change the color based on the focused state
               const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
 
@@ -77,7 +83,7 @@ const TabsLayout = () => {
                     color={iconColor}
                   />
                   <View>
-                    <Text>Post</Text>
+                    <Text>Post product</Text>
                   </View>
                 </>
               );
@@ -127,11 +133,7 @@ const TabsLayout = () => {
               const iconName = focused ? "settings" : "settings-outline";
               return (
                 <>
-                  <Ionicons
-                    name={iconName}
-                    size={iconSize}
-                    color={iconColor}
-                  />
+                  <Ionicons name={iconName} size={iconSize} color={iconColor} />
                   <View>
                     <Text>Settings</Text>
                   </View>

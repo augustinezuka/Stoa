@@ -83,7 +83,12 @@ const SignIn = () => {
 
           {/* Continue with Google */}
           <CustomButton
-            title="Continue with Google"
+            title={
+              <>
+                <Image source={require("assets/images/Google.png")} /> Continue
+                with Google
+              </>
+            }
             handlePress={signInWithGoogle}
             containerStyles="mt-5 mx-4 "
           />
@@ -93,6 +98,14 @@ const SignIn = () => {
               Don't have an account ?{" "}
               <Link href={"sign-up"} className="text-blue-500">
                 Sign Up
+              </Link>
+            </Text>
+          </View>
+          <View className="justify-center pt-5 flex-row gap-2">
+            <Text className="text-sm ">
+              By signing in I have read and I agree with Stoa's{" "}
+              <Link href={"TermsAndConditions"} className="text-blue-500">
+                Terms and conditons &copy;{new Date().getFullYear()}
               </Link>
             </Text>
           </View>

@@ -110,7 +110,7 @@ const SignUp = () => {
           </View>
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-sm ">
-              By signing up I agree with Stoa's
+              By signing up I have read and I agree with Stoa's{' '}
               <Link href={"TermsAndConditions"} className="text-blue-500">
                 Terms and conditons &copy;{new Date().getFullYear()}
               </Link>
