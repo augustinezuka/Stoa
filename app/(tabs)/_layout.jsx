@@ -8,13 +8,12 @@ const TabsLayout = () => {
   return (
     <>
       <Tabs
-        style={{
-          height: 80, // Increase the height to your desired value
-        }}
         screenOptions={{
           tabBarShowLabel: false,
           tabBarStyle: {
+            height: 80, // Increase the height to your desired value
             backgroundColor: "#e6f0ff", // Change this to your desired color
+            paddingVertical: 10, // Add padding to move tabs higher
           },
         }}
       >
@@ -24,18 +23,13 @@ const TabsLayout = () => {
             title: "Home",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
-              // Change the icon's name based on the focused state
-              const iconSize = focused ? 28 : 24; // Adjust this if you have different icons for focused state
-              // Change the color based on the focused state
-              const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
-
+              const iconSize = focused ? 28 : 24;
+              const iconColor = focused ? "#004c99" : "#b0b0b0";
               return (
-                <>
+                <View style={{ alignItems: "center" }}>
                   <AntDesign name="home" size={iconSize} color={iconColor} />
-                  <View>
-                    <Text>Home</Text>
-                  </View>
-                </>
+                  <Text style={{ fontSize: 12, color: iconColor }}>Home</Text>
+                </View>
               );
             },
           }}
@@ -46,19 +40,16 @@ const TabsLayout = () => {
             title: "Bookmark",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
-              // Change the icon's name based on the focused state
-              const iconSize = focused ? 26 : 24; // Adjust this if you have different icons for focused state
-              // Change the color based on the focused state
-              const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
-
+              const iconSize = focused ? 26 : 24;
+              const iconColor = focused ? "#004c99" : "#b0b0b0";
               const iconName = focused ? "bookmarks" : "bookmarks-outline";
               return (
-                <>
+                <View style={{ alignItems: "center" }}>
                   <Ionicons name={iconName} size={iconSize} color={iconColor} />
-                  <View>
-                    <Text>Whishlist</Text>
-                  </View>
-                </>
+                  <Text style={{ fontSize: 12, color: iconColor }}>
+                    Whishlist
+                  </Text>
+                </View>
               );
             },
           }}
@@ -66,78 +57,62 @@ const TabsLayout = () => {
         <Tabs.Screen
           name="create"
           options={{
-            title: "",
+            title: "Upload",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
-              // Change the icon's name based on the focused state
-              const iconSize = focused ? 28 : 26; // Adjust this if you have different icons for focused state
-              // Change the color based on the focused state
-              const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
-
-              const iconName = focused ? "plus" : "plus";
+              const iconSize = focused ? 28 : 26;
+              const iconColor = focused ? "#004c99" : "#b0b0b0";
               return (
-                <>
-                  <AntDesign
-                    name={iconName}
-                    size={iconSize}
-                    color={iconColor}
-                  />
-                  <View>
-                    <Text>Post product</Text>
-                  </View>
-                </>
+                <View style={{ alignItems: "center" }}>
+                  <AntDesign name="plus" size={iconSize} color={iconColor} />
+                  <Text style={{ fontSize: 12, color: iconColor }}>
+                    Post product
+                  </Text>
+                </View>
               );
             },
           }}
         />
-
         <Tabs.Screen
           name="profile"
           options={{
             title: "Profile",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
-              // Change the icon's name based on the focused state
-              const iconSize = focused ? 28 : 24; // Adjust this if you have different icons for focused state
-              // Change the color based on the focused state
-              const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
-
-              const iconName = focused ? "user" : "user-o";
+              const iconSize = focused ? 28 : 24;
+              const iconColor = focused ? "#004c99" : "#b0b0b0";
               return (
-                <>
+                <View style={{ alignItems: "center" }}>
                   <FontAwesome
-                    name={iconName}
+                    name={focused ? "user" : "user-o"}
                     size={iconSize}
                     color={iconColor}
                   />
-                  <View>
-                    <Text>Me</Text>
-                  </View>
-                </>
+                  <Text style={{ fontSize: 12, color: iconColor }}>Me</Text>
+                </View>
               );
             },
           }}
         />
-
         <Tabs.Screen
           name="settings"
           options={{
             title: "Settings",
             headerShown: false,
             tabBarIcon: ({ focused }) => {
-              // Change the icon's name based on the focused state
-              const iconSize = focused ? 28 : 24; // Adjust this if you have different icons for focused state
-              // Change the color based on the focused state
-              const iconColor = focused ? "#004c99" : "#b0b0b0"; // Example colors, adjust as needed
-
-              const iconName = focused ? "settings" : "settings-outline";
+              const iconSize = focused ? 28 : 24;
+              const iconColor = focused ? "#004c99" : "#b0b0b0";
               return (
-                <>
-                  <Ionicons name={iconName} size={iconSize} color={iconColor} />
-                  <View>
-                    <Text>Settings</Text>
-                  </View>
-                </>
+                <View style={{ alignItems: "center" }}>
+                  <Ionicons
+                    name={focused ? "settings" : "settings-outline"}
+                    size={iconSize}
+                    color={iconColor}
+                  />
+                  <Text style={{ fontSize: 12, color: iconColor }}>
+                    Settings
+                  </Text>
+                </View>
               );
             },
           }}
