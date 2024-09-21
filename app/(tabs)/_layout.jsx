@@ -12,7 +12,7 @@ const TabsLayout = () => {
           tabBarShowLabel: false,
           tabBarStyle: {
             height: 80, // Increase the height to your desired value
-            backgroundColor: "#e6f0ff", // Change this to your desired color
+            backgroundColor: "#f0f8ff.", // Change this to your desired color
             paddingVertical: 10, // Add padding to move tabs higher
           },
         }}
@@ -24,7 +24,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => {
               const iconSize = focused ? 28 : 24;
-              const iconColor = focused ? "#004c99" : "#b0b0b0";
+              const iconColor = focused ? "#004c99" : "#9a9a9a";
               return (
                 <View style={{ alignItems: "center" }}>
                   <AntDesign name="home" size={iconSize} color={iconColor} />
@@ -34,26 +34,7 @@ const TabsLayout = () => {
             },
           }}
         />
-        <Tabs.Screen
-          name="bookmark"
-          options={{
-            title: "Bookmark",
-            headerShown: false,
-            tabBarIcon: ({ focused }) => {
-              const iconSize = focused ? 26 : 24;
-              const iconColor = focused ? "#004c99" : "#b0b0b0";
-              const iconName = focused ? "bookmarks" : "bookmarks-outline";
-              return (
-                <View style={{ alignItems: "center" }}>
-                  <Ionicons name={iconName} size={iconSize} color={iconColor} />
-                  <Text style={{ fontSize: 12, color: iconColor }}>
-                    Whishlist
-                  </Text>
-                </View>
-              );
-            },
-          }}
-        />
+
         <Tabs.Screen
           name="create"
           options={{
@@ -61,13 +42,11 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => {
               const iconSize = focused ? 28 : 26;
-              const iconColor = focused ? "#004c99" : "#b0b0b0";
+              const iconColor = focused ? "#004c99" : "#9a9a9a";
               return (
                 <View style={{ alignItems: "center" }}>
                   <AntDesign name="plus" size={iconSize} color={iconColor} />
-                  <Text style={{ fontSize: 12, color: iconColor }}>
-                    Post product
-                  </Text>
+                  <Text style={{ fontSize: 12, color: iconColor }}>Post</Text>
                 </View>
               );
             },
@@ -80,7 +59,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => {
               const iconSize = focused ? 28 : 24;
-              const iconColor = focused ? "#004c99" : "#b0b0b0";
+              const iconColor = focused ? "#004c99" : "#9a9a9a";
               return (
                 <View style={{ alignItems: "center" }}>
                   <FontAwesome
@@ -101,7 +80,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => {
               const iconSize = focused ? 28 : 24;
-              const iconColor = focused ? "#004c99" : "#b0b0b0";
+              const iconColor = focused ? "#004c99" : "#9a9a9a";
               return (
                 <View style={{ alignItems: "center" }}>
                   <Ionicons
